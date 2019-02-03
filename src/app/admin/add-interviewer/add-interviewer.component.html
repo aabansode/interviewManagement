@@ -1,0 +1,61 @@
+<div class="form-group formarea">
+    <form [formGroup]="rForm" class="form" (ngSubmit)="addPost(rForm.value)">
+      <div class="container">
+        <div class="row column">
+  
+          <div class="container">
+            <label>Name</label>
+            <input type="text" class="form-control" formControlName="name">
+            <div class="alert alert-danger" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">This
+              is required, and must contain only alphabets!</div>
+  
+          </div>
+  
+          <div class="container">
+            <label class="labels">Email</label>
+            <input type="email" formControlName="email" class="form-control">
+            <div class="alert alert-danger" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">This
+              should be in proper format!</div>
+  
+          </div>
+
+
+          <div class="container">
+            <label class="labels">Password</label>
+            <input type="password" formControlName="password" class="form-control">
+            <div class="alert alert-danger" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">This
+              should have min 5 characters!</div>
+  
+          </div>
+
+
+          <div class="container">
+            <label class="labels">Role</label>
+            <input type="text" formControlName="role" class="form-control">
+            <div class="alert alert-danger" *ngIf="!rForm.controls['role'].valid && rForm.controls['role'].touched">This
+              is required!</div>
+  
+          </div>
+  
+  
+  <div class="subres">
+      <input type="submit" class="btn btn-success sub " value="submit" [disabled]="!rForm.valid" [class.disablepointer]="!rForm.valid" >
+      <input type="reset" class="btn btn-warning sub res" value="reset">
+  </div>
+          
+        </div>
+  
+      </div>
+  
+    </form>
+  </div>
+  
+  <!-- 
+  <ng-template #formInfo>
+    <div class="form-container">
+      <div class="row columns">
+        <h1>{{name}}</h1>
+        <p>{{description}}</p>
+      </div>
+    </div>
+  </ng-template> -->

@@ -1,0 +1,36 @@
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: auto;
+    overflow: auto;
+    cursor: pointer;    
+  }
+  
+  li a {
+    display: block;
+    color:#2695A5;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+  }
+  
+  li a.active {
+    background-color:#2695A5;
+    color: white;
+  }
+  
+  li a:hover:not(.active) {
+    background-color:#ccc;
+    color: white;
+  }
+  .forroute{
+    
+    margin-left: 220px;
+    height: auto;
+    width: auto;
+  }

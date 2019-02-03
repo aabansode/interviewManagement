@@ -1,0 +1,88 @@
+
+<div class="form-group formarea">
+  <h4 class="heading">Please fill Your Details!</h4>
+  <form [formGroup]="rForm" class="form" (ngSubmit)="addPost(rForm.value)">
+    <div class="container">
+      <div class="row column">
+
+        <div class="container">
+          <label>Name</label>
+          <input type="text" class="form-control" formControlName="name">
+          <div class="alert alert-danger" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">This
+            is required, and must contain only alphabets!</div>
+
+        </div>
+
+        <div class="container">
+          <label class="labels">Email</label>
+          <input type="email" formControlName="email" class="form-control">
+          <div class="alert alert-danger" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">This
+            should be in proper format!</div>
+
+        </div>
+
+
+        <div class="container">
+          <label class="labels">Mobile No</label>
+          <input type="tel" formControlName="mobno" class="form-control">
+          <div class="alert alert-danger" *ngIf="!rForm.controls['mobno'].valid && rForm.controls['mobno'].touched">Enter 10 digits Mobile no.</div>
+
+        </div>
+
+
+        <div class="container">
+          <label class="labels">Total Experience</label>
+          <div class="row">
+            <div class="col-md-6">
+                <input type="number" placeholder="Years" formControlName="experienceyear" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <input type="number" placeholder="Months" formControlName="experiencemonths" class="form-control">
+            </div>
+
+          </div>
+          
+          
+          <div class="alert alert-danger" *ngIf="!rForm.controls['experienceyear'].valid && rForm.controls['experienceyear'].touched">This
+            is required!</div>
+
+        </div>
+
+        <div class="container">
+            <label class="labels">Upload Resume</label>
+            <input type="file" formControlName="resume" class="form-control nonborder">
+            <div class="alert alert-danger" *ngIf="!rForm.controls['resume'].valid && rForm.controls['resume'].touched">one file required!</div>
+  
+          </div>
+
+
+
+        <div class="container">
+            <label class="labels">Upload an introductory video</label>
+            <input type="file" formControlName="video" class="form-control nonborder">
+            <div class="alert alert-danger" *ngIf="!rForm.controls['video'].valid && rForm.controls['video'].touched">one video file required!</div>
+  
+          </div>
+
+
+<div class="subres">
+    <input type="submit" class="btn btn-success sub " value="submit" [disabled]="!rForm.valid" [class.disablepointer]="!rForm.valid" >
+    <input type="reset" class="btn btn-warning sub res" value="reset">
+</div>
+        
+      </div>
+
+    </div>
+
+  </form>
+</div>
+
+<!-- 
+<ng-template #formInfo>
+  <div class="form-container">
+    <div class="row columns">
+      <h1>{{name}}</h1>
+      <p>{{description}}</p>
+    </div>
+  </div>
+</ng-template> -->
