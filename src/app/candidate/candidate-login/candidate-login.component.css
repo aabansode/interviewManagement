@@ -1,0 +1,67 @@
+/* body{
+    background: #ebebeb;
+    
+} */
+/* .form-container{
+    display: block;
+    width: 90%;
+    padding: 2em;
+    margin: 2em auto;
+    background: #fff;
+} */
+/* .alert{
+    background: #f2edda;
+    padding: 7px;
+    font-size: .9em;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: 2s alertAnim forwards;
+} */
+/* .button{
+    margin-top: 3rem;
+} */
+/* 
+h1{
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 2em;
+} */
+
+.sub{
+    margin-top: 20px;
+}
+.res{
+    margin-left: 5px;
+}
+.labels{
+    margin-top: 20px;
+}
+
+.formarea{
+    padding: 20px;
+    
+    border: 1px solid #2695A5;
+    
+}
+.subres{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.disablepointer{
+    cursor: not-allowed;
+}.marks{
+    width: 40px;
+}
+.middle{
+    text-align: center;
+}
+table{
+    margin-bottom: 30px;
+}
+.colorgreen{
+    color: green;
+}
+.colorred{
+    color: red;
+}

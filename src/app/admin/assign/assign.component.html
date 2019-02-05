@@ -6,21 +6,19 @@
         <div class="container">
           <label>Select Candidate</label>
           <select class="form-control" id="candidateSelected" formControlName="candidateSelected">
-            <option *ngFor="let candidateSelected of candidates" [value]="candidateSelected.id">{{candidateSelected.name}}</option>
+            <option *ngFor="let candidateSelected of candidatesToAssign" [value]="candidateSelected">{{candidateSelected}}</option>
           </select>
           <div class="alert alert-danger" *ngIf="!rForm.controls['candidateSelected'].valid && rForm.controls['candidateSelected'].touched">This
             is required!</div>
-
         </div>
 
         <div class="container">
           <label class="labels">Select Interviewer</label>
           <select class="form-control" id="interviewerSelected" formControlName="interviewerSelected">
-            <option *ngFor="let interviewerSelected of interviewer" [value]="interviewerSelected.id">{{interviewerSelected.name}}</option>
+            <option *ngFor="let interviewerSelected of interviewer" [value]="interviewerSelected.name">{{interviewerSelected.name}}</option>
           </select>
           <div class="alert alert-danger" *ngIf="!rForm.controls['interviewerSelected'].valid && rForm.controls['interviewerSelected'].touched">This
             is required!</div>
-
         </div>
 
 

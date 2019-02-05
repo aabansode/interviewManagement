@@ -34,3 +34,23 @@ ul {
     height: auto;
     width: auto;
   }
+  .formarea{
+    padding: 20px;
+    
+    border: 1px solid #2695A5;
+    
+}
+  .subres{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sub{
+  margin-top: 20px;
+}
+.res{
+  margin-left: 5px;
+}
+.labels{
+  margin-top: 20px;
+}

@@ -58,3 +58,11 @@ h1{
 .nonborder{
     border: none;
 }
+
+.middle{
+    text-align: center;
+}
+
+.margintop{
+    margin-top: 20px;
+}

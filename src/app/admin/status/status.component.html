@@ -3,26 +3,14 @@
   <th>Candidate Name</th>
   <th>Interviewer Name</th>
   <th>Scheduled Time</th>
-  <tr>
-    <td>Vishwas yadav</td>
-    <td>Ms. Y</td>
-    <td>12/02/2019  05:30</td>
+  <th>Feedback</th>
+  <tr *ngFor="let mapped of statusAssigned">
+    <td>{{mapped.candidateName}}</td>
+    <td>{{mapped.interviewerName}}</td>
+    <td>{{mapped.date}}  {{mapped.time}}</td>
+    <td>{{mapped.marks}}</td>
   </tr>
-  <tr>
-      <td>Vishwas yadav</td>
-      <td>Ms. Y</td>
-      <td>12/02/2019  05:30</td>
-    </tr>
-    <tr>
-        <td>Vishwas yadav</td>
-        <td>Ms. Y</td>
-        <td>12/02/2019  05:30</td>
-      </tr>
-      <tr>
-          <td>Vishwas yadav</td>
-          <td>Ms. Y</td>
-          <td>12/02/2019  05:30</td>
-        </tr>
+  
 
 </table>
 

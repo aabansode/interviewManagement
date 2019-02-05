@@ -20,6 +20,13 @@
             should be in proper format!</div>
 
         </div>
+        <div class="container">
+          <label class="labels">Set Password</label>
+          <input type="password" formControlName="password" class="form-control">
+          <div class="alert alert-danger" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">This
+            should have min 5 characters!</div>
+
+        </div>
 
 
         <div class="container">
@@ -50,7 +57,7 @@
 
         <div class="container">
             <label class="labels">Upload Resume</label>
-            <input type="file" formControlName="resume" class="form-control nonborder">
+            <input type="file" formControlName="resume" class="form-control nonborder" accept="text/plain,.doc, .docx,.ppt, .pptx,.txt,.pdf">
             <div class="alert alert-danger" *ngIf="!rForm.controls['resume'].valid && rForm.controls['resume'].touched">one file required!</div>
   
           </div>
@@ -59,7 +66,7 @@
 
         <div class="container">
             <label class="labels">Upload an introductory video</label>
-            <input type="file" formControlName="video" class="form-control nonborder">
+            <input type="file" formControlName="video" class="form-control nonborder" accept="video/mp4,video/x-m4v,video/*">
             <div class="alert alert-danger" *ngIf="!rForm.controls['video'].valid && rForm.controls['video'].touched">one video file required!</div>
   
           </div>
@@ -75,7 +82,12 @@
     </div>
 
   </form>
+
+<div class="container middle margintop">
+    <a [routerLink]="['/loginCandidate']">Already Registered? Click Here to check your Status!</a>
+  </div>
 </div>
+
 
 <!-- 
 <ng-template #formInfo>

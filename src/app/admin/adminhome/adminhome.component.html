@@ -1,11 +1,52 @@
-<div>
-    <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" [class.active]="isSelectedAdd" (click)="clickedAdd()" [routerLink]="['/admin/addInterviewer']">Add-Interviewer</a></li>
-        <li class="nav-item"><a class="nav-link" [class.active]="isSelectedAssign" (click)="clickedAssign()" [routerLink]="['/admin/assignCandToInterviewer']">Assign-Interviewer</a></li>
-        <li class="nav-item"><a class="nav-link" [class.active]="isSelectedStatus" (click)="clickedStatus()" [routerLink]="['/admin/status']">Status</a></li>    
-    </ul>
-</div>
+<div *ngIf="!success" class="form-group formarea">
+        <form [formGroup]="rForm" class="form" (ngSubmit)="addPost(rForm.value)">
+          <div class="container">
+            <div class="row column">
+      
+      
+              <div class="container">
+                <label class="labels">Email</label>
+                <input type="email" formControlName="email" class="form-control">
+                <div class="alert alert-danger" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">This
+                  should be in proper format!</div>
+      
+              </div>
+    
+    
+              <div class="container">
+                <label class="labels">Password</label>
+                <input type="password" formControlName="password" class="form-control">
+                <div class="alert alert-danger" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">This
+                  should have min 5 characters!</div>
+      
+              </div>
+    
+      
+      
+      <div class="subres">
+          <input type="submit" class="btn btn-success sub " value="submit" [disabled]="!rForm.valid" [class.disablepointer]="!rForm.valid" >
+          <input type="reset" class="btn btn-warning sub res" value="reset">
+          <p class="error">{{wrongCredentialsMsg}}</p>
+      </div>
+              
+            </div>
+      
+          </div>
+      
+        </form>
+      </div> 
+    
+<div *ngIf="success">
 
-<div class="container forroute">
-    <router-outlet></router-outlet>
+        <div>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" [class.active]="isSelectedAdd" (click)="clickedAdd()" [routerLink]="['/admin/addInterviewer']">Add-Interviewer</a></li>
+                    <li class="nav-item"><a class="nav-link" [class.active]="isSelectedAssign" (click)="clickedAssign()" [routerLink]="['/admin/assignCandToInterviewer']">Assign-Interviewer</a></li>
+                    <li class="nav-item"><a class="nav-link" [class.active]="isSelectedStatus" (click)="clickedStatus()" [routerLink]="['/admin/status']">Status</a></li>    
+                </ul>
+            </div>
+            
+            <div class="container forroute">
+                <router-outlet></router-outlet>
+            </div>
 </div>

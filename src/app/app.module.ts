@@ -9,6 +9,7 @@ import { AdminModule } from './admin/admin.module';
 import { CandidateModule } from './candidate/candidate.module';
 import { InterviewerModule } from './interviewer/interviewer.module';
 import { HomepageComponent } from './homepage/homepage.component';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [

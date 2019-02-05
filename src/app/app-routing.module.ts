@@ -8,6 +8,7 @@ import { StatusComponent } from './admin/status/status.component';
 import { CandidateModule } from './candidate/candidate.module';
 import { UploadresumeComponent } from './candidate/uploadresume/uploadresume.component';
 import { InterviewerinfoComponent } from './interviewer/interviewerinfo/interviewerinfo.component';
+import { CandidateLoginComponent } from './candidate/candidate-login/candidate-login.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
  {path:'assignCandToInterviewer',component:AssignComponent},
  {path:'status',component:StatusComponent},{path:'addInterviewer',component:AddInterviewerComponent}]},
  {path:'candidate', component:UploadresumeComponent},
- {path:'interviewer',component:InterviewerinfoComponent}
+ {path:'interviewer',component:InterviewerinfoComponent},
+ {path:'loginCandidate',component:CandidateLoginComponent}
 ];
 
 @NgModule({
