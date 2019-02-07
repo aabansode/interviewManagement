@@ -41,10 +41,10 @@
           <label class="labels">Total Experience</label>
           <div class="row">
             <div class="col-md-6">
-                <input type="number" placeholder="Years" formControlName="experienceyear" class="form-control">
+                <input type="number" min='0' placeholder="Years" formControlName="experienceyear" class="form-control">
             </div>
             <div class="col-md-6">
-                <input type="number" placeholder="Months" formControlName="experiencemonths" class="form-control">
+                <input type="number" min='0' max="11" placeholder="Months" formControlName="experiencemonths" class="form-control">
             </div>
 
           </div>

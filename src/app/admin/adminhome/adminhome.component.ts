@@ -79,4 +79,8 @@ public clickedStatus(){
   this.isSelectedStatus=true;
 
 }
+
+seterrormsg(){
+  this.wrongCredentialsMsg="";
+}
 }

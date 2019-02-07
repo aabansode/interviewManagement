@@ -26,6 +26,8 @@ export class InterviewerinfoComponent implements OnInit {
   resumepath:string="";
   activeresume:boolean=false;
   DomSanitizationService;
+  showresumeof:string;
+  showvideoof:string;
 
   rForm: FormGroup;
   post: any;
@@ -136,6 +138,7 @@ export class InterviewerinfoComponent implements OnInit {
         // this.videopath=this.videourl(this.videopath);
         console.log("path--:"+this.videopath);
         this.activeVideo=true;
+        this.showvideoof=candName;
       }
     }
   }
@@ -147,8 +150,14 @@ export class InterviewerinfoComponent implements OnInit {
         this.resumepath="/assets/resume/"+this.resumepath;
         console.log("pathresume--:"+this.resumepath);
         this.activeresume=true;
+        this.showresumeof=candName;
       }
     }
+  }
+
+  seterrormsg(){
+    this.wrongCredentialsMsg="";
+   
   }
 
   // videourl(path){

@@ -151,6 +151,11 @@ export class CandidateLoginComponent implements OnInit {
     }
    }
 
+   seterrormsg(){
+     this.wrongCredentialsMsg="";
+    
+   }
+
 
 
 }
